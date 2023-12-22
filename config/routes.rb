@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-get '/', to: "home#index"
+  get 'homes/index'
+  root to: "items#index"
 end
