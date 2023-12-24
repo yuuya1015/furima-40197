@@ -1,24 +1,50 @@
-# README
+## usersテーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+| Column             | Type       | Options     |
+| ------------------ | ---------- | ----------- |
+| nickname           | string     | null: false |
+| email              | string     | null: false |
+| encrypted_password | string     | null: false |
+| first_name         | string     | null: false |
+| first_name_ruby    | string     | null: false |
+| last_name          | string     | null: false |
+| last_name_ruby     | string     | null: false |
+  has_many :items
+  has_many :payment
 
-Things you may want to cover:
+| age                | string     | null: false |
 
-* Ruby version
+## itemsテーブル
+| Column              | Type       | Options     |
+| ------------------- | ---------- | ----------- |
+| item_name           | string     | null: false |
+| description_of_item | text       | null: false |
+| category_id         | integer    | null: false |
+| condition_id        | integer    | null: false |
+| postage_id          | integer    | null: false |
+| item_address_id     | integer    | null: false |
+| shipping_id         | integer    | null: false |
+| price_id            | integer    | null: false |
+  has_one :payment
+  belongs_to :user
 
-* System dependencies
+## paymentテーブル
+| Column | Type       | Options                       |
+| ------ | ---------- | ----------------------------- |
+| user   | references |null: false, foreign_key: true |
+| item   | references |null: false, foreign_key: true |
+  belongs_to :user
+  belongs_to :item
+  has_one :address
 
-* Configuration
+## addressテーブル
+| Column           | Type       | Options     |
+| ---------------- | ---------- | ----------- |
+| post_code        | string     | null: false |
+| prefectures_id   | integer    | null: false |
+| municipality     | string     | null: false |
+| street_address   | string     | null: false |
+| building_name    | string     | null: false |
+| telephone_number | string     | null: false |
+  belongs_to :address
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
