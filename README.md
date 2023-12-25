@@ -48,3 +48,4 @@
 | telephone_number | string     | null: false |
   belongs_to :address
 
+
