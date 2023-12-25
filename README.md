@@ -1,18 +1,18 @@
 ## usersテーブル
 
-| Column             | Type       | Options     |
-| ------------------ | ---------- | ----------- |
-| nickname           | string     | null: false |
-| email              | string     | null: false |
-| encrypted_password | string     | null: false |
-| first_name         | string     | null: false |
-| first_name_ruby    | string     | null: false |
-| last_name          | string     | null: false |
-| last_name_ruby     | string     | null: false |
-  has_many :items
-  has_many :payment
+| Column             | Type       | Options                   |
+| ------------------ | ---------- | ------------------------- |
+| nickname           | string     | null: false               |
+| email              | string     | null: false, unique: true |
+| encrypted_password | string     | null: false               |
+| first_name         | string     | null: false               |
+| first_name_ruby    | string     | null: false               |
+| last_name          | string     | null: false               |
+| last_name_ruby     | string     | null: false               |
+| date               | string     | null: false               |
 
-| age                | string     | null: false |
+  has_many :items
+  has_many :payments
 
 ## itemsテーブル
 | Column              | Type       | Options     |
@@ -23,8 +23,9 @@
 | condition_id        | integer    | null: false |
 | postage_id          | integer    | null: false |
 | item_address_id     | integer    | null: false |
-| shipping_id         | integer    | null: false |
-| price_id            | integer    | null: false |
+| prefecture_id       | integer    | null: false |
+| price               | integer    | null: false |
+
   has_one :payment
   belongs_to :user
 
@@ -33,19 +34,22 @@
 | ------ | ---------- | ----------------------------- |
 | user   | references |null: false, foreign_key: true |
 | item   | references |null: false, foreign_key: true |
+
   belongs_to :user
   belongs_to :item
   has_one :address
 
 ## addressテーブル
-| Column           | Type       | Options     |
-| ---------------- | ---------- | ----------- |
-| post_code        | string     | null: false |
-| prefectures_id   | integer    | null: false |
-| municipality     | string     | null: false |
-| street_address   | string     | null: false |
-| building_name    | string     | null: false |
-| telephone_number | string     | null: false |
-  belongs_to :address
+| Column           | Type       | Options                       |
+| ---------------- | ---------- | ----------------------------- |
+| post_code        | string     | null: false                   |
+| prefecture_id    | integer    | null: false                   |
+| municipality     | string     | null: false                   |
+| street_address   | string     | null: false                   |
+| building_name    | string     |                               |
+| telephone_number | string     | null: false                   |
+| payment          | references |null: false, foreign_key: true |
+
+  belongs_to :payment
 
 
