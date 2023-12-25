@@ -1,64 +1,64 @@
 <mxfile host="65bd71144e">
     <diagram id="_RZ2GBu5dfYIB4OOumt9" name="ページ1">
-        <mxGraphModel dx="350" dy="563" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+        <mxGraphModel dx="906" dy="647" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="36" value="&lt;div&gt;usersテーブル&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;ol&gt;&lt;li style=&quot;&quot;&gt;nickname&lt;/li&gt;&lt;li style=&quot;&quot;&gt;email&lt;/li&gt;&lt;li style=&quot;&quot;&gt;encryted_passward&lt;/li&gt;&lt;li style=&quot;&quot;&gt;encryted_passward&lt;/li&gt;&lt;li style=&quot;&quot;&gt;first_name&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;first_name_ruby&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;last_name&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;last_name_ruby&lt;/li&gt;&lt;li style=&quot;&quot;&gt;age&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;" style="shape=ext;double=1;whiteSpace=wrap;html=1;aspect=fixed;labelBackgroundColor=default;fontColor=#000000;align=left;verticalAlign=middle;" vertex="1" parent="1">
+                <mxCell id="36" value="&lt;div&gt;usersテーブル&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;ol&gt;&lt;li style=&quot;&quot;&gt;nickname&lt;/li&gt;&lt;li style=&quot;&quot;&gt;email&lt;/li&gt;&lt;li style=&quot;&quot;&gt;encryted_passward&lt;/li&gt;&lt;li style=&quot;&quot;&gt;encryted_passward&lt;/li&gt;&lt;li style=&quot;&quot;&gt;first_name&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;first_name_ruby&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;last_name&lt;/li&gt;&lt;li style=&quot;border-color: var(--border-color);&quot;&gt;last_name_ruby&lt;/li&gt;&lt;li style=&quot;&quot;&gt;date&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;" style="shape=ext;double=1;whiteSpace=wrap;html=1;aspect=fixed;labelBackgroundColor=default;fontColor=#000000;align=left;verticalAlign=middle;" parent="1" vertex="1">
                     <mxGeometry x="120" y="70" width="240" height="240" as="geometry"/>
                 </mxCell>
-                <mxCell id="38" value="&lt;div style=&quot;&quot;&gt;itemsテーブル&lt;/div&gt;&lt;ol&gt;&lt;li style=&quot;&quot;&gt;item_name&lt;/li&gt;&lt;li&gt;descrption_of_item_id&lt;/li&gt;&lt;li&gt;category_id&lt;/li&gt;&lt;li&gt;condition_id&lt;/li&gt;&lt;li&gt;postage_id&lt;/li&gt;&lt;li&gt;item_address_id&lt;/li&gt;&lt;li&gt;shipping_id&lt;/li&gt;&lt;li&gt;price_id&lt;/li&gt;&lt;/ol&gt;" style="shape=ext;double=1;whiteSpace=wrap;html=1;aspect=fixed;labelBackgroundColor=default;fontColor=#000000;verticalAlign=top;align=left;" vertex="1" parent="1">
+                <mxCell id="38" value="&lt;div style=&quot;&quot;&gt;itemsテーブル&lt;/div&gt;&lt;ol&gt;&lt;li style=&quot;&quot;&gt;item_name&lt;/li&gt;&lt;li&gt;descrption_of_item_id&lt;/li&gt;&lt;li&gt;category_id&lt;/li&gt;&lt;li&gt;condition_id&lt;/li&gt;&lt;li&gt;postage_id&lt;/li&gt;&lt;li&gt;item_address_id&lt;/li&gt;&lt;li&gt;prefecture_id&lt;/li&gt;&lt;li&gt;price&lt;/li&gt;&lt;li&gt;user&lt;/li&gt;&lt;/ol&gt;" style="shape=ext;double=1;whiteSpace=wrap;html=1;aspect=fixed;labelBackgroundColor=default;fontColor=#000000;verticalAlign=top;align=left;" parent="1" vertex="1">
                     <mxGeometry x="480" y="80" width="240" height="240" as="geometry"/>
                 </mxCell>
-                <mxCell id="39" value="paymentテーブル&lt;br&gt;&lt;br&gt;&lt;ol&gt;&lt;li&gt;クレカ情報（テーブルには保存しない）&lt;/li&gt;&lt;li&gt;user&lt;/li&gt;&lt;li&gt;item&lt;/li&gt;&lt;/ol&gt;" style="shape=ext;double=1;whiteSpace=wrap;html=1;aspect=fixed;labelBackgroundColor=default;fontColor=#000000;verticalAlign=top;align=left;" vertex="1" parent="1">
+                <mxCell id="39" value="paymentテーブル&lt;br&gt;&lt;br&gt;&lt;ol&gt;&lt;li&gt;クレカ情報（テーブルには保存しない）&lt;/li&gt;&lt;li&gt;user&lt;/li&gt;&lt;li&gt;item&lt;/li&gt;&lt;/ol&gt;" style="shape=ext;double=1;whiteSpace=wrap;html=1;aspect=fixed;labelBackgroundColor=default;fontColor=#000000;verticalAlign=top;align=left;" parent="1" vertex="1">
                     <mxGeometry x="120" y="360" width="280" height="280" as="geometry"/>
                 </mxCell>
-                <mxCell id="40" value="addressテーブル&lt;br&gt;&lt;ol style=&quot;border-color: var(--border-color); font-family: Helvetica;&quot;&gt;&lt;li style=&quot;color: rgb(0, 0, 0);&quot;&gt;post_code&lt;/li&gt;&lt;li style=&quot;&quot;&gt;&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;&quot;&gt;prefectures_id&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;&lt;li style=&quot;&quot;&gt;&lt;div&gt;&lt;span style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; background-color: rgb(255, 255, 255);&quot;&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;municipality&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;/li&gt;&lt;li style=&quot;&quot;&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;span style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace;&quot;&gt;street_address&lt;/span&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;/li&gt;&lt;li style=&quot;&quot;&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; background-color: rgb(255, 255, 255);&quot;&gt;building_name&lt;/span&gt;&lt;/div&gt;&lt;/li&gt;&lt;li style=&quot;&quot;&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; background-color: rgb(255, 255, 255);&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;telephone_number&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;/li&gt;&lt;/ol&gt;" style="shape=ext;double=1;whiteSpace=wrap;html=1;aspect=fixed;labelBackgroundColor=default;fontColor=#000000;align=left;verticalAlign=top;" vertex="1" parent="1">
-                    <mxGeometry x="480" y="440" width="200" height="200" as="geometry"/>
+                <mxCell id="40" value="addressテーブル&lt;br&gt;&lt;ol style=&quot;border-color: var(--border-color); font-family: Helvetica;&quot;&gt;&lt;li style=&quot;color: rgb(0, 0, 0);&quot;&gt;post_code&lt;/li&gt;&lt;li style=&quot;&quot;&gt;&lt;div style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; line-height: 18px;&quot;&gt;&lt;div style=&quot;&quot;&gt;prefecture_id&lt;br&gt;&lt;/div&gt;&lt;/div&gt;&lt;/li&gt;&lt;li style=&quot;&quot;&gt;&lt;div&gt;&lt;span style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; background-color: rgb(255, 255, 255);&quot;&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;municipality&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;/li&gt;&lt;li style=&quot;&quot;&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;span style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace;&quot;&gt;street_address&lt;/span&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;/li&gt;&lt;li style=&quot;&quot;&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; background-color: rgb(255, 255, 255);&quot;&gt;building_name&lt;/span&gt;&lt;/div&gt;&lt;/li&gt;&lt;li style=&quot;&quot;&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;font-family: Menlo, Monaco, &amp;quot;Courier New&amp;quot;, monospace; background-color: rgb(255, 255, 255);&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;telephone_number&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;/li&gt;&lt;li style=&quot;&quot;&gt;&lt;div style=&quot;line-height: 18px;&quot;&gt;payment&lt;/div&gt;&lt;/li&gt;&lt;/ol&gt;" style="shape=ext;double=1;whiteSpace=wrap;html=1;aspect=fixed;labelBackgroundColor=default;fontColor=#000000;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="440" width="210" height="210" as="geometry"/>
                 </mxCell>
-                <mxCell id="44" value="" style="line;strokeWidth=2;html=1;labelBackgroundColor=default;fontColor=#000000;" vertex="1" parent="1">
+                <mxCell id="44" value="" style="line;strokeWidth=2;html=1;labelBackgroundColor=default;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="360" y="190" width="120" height="10" as="geometry"/>
                 </mxCell>
-                <mxCell id="45" value="" style="line;strokeWidth=2;html=1;labelBackgroundColor=default;fontColor=#000000;rotation=-30;" vertex="1" parent="1">
+                <mxCell id="45" value="" style="line;strokeWidth=2;html=1;labelBackgroundColor=default;fontColor=#000000;rotation=-30;" parent="1" vertex="1">
                     <mxGeometry x="433.35" y="172.5" width="50" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="46" value="" style="line;strokeWidth=2;html=1;labelBackgroundColor=default;fontColor=#000000;direction=south;rotation=122;" vertex="1" parent="1">
+                <mxCell id="46" value="" style="line;strokeWidth=2;html=1;labelBackgroundColor=default;fontColor=#000000;direction=south;rotation=122;" parent="1" vertex="1">
                     <mxGeometry x="452.52" y="184.15" width="10" height="52.35" as="geometry"/>
                 </mxCell>
-                <mxCell id="48" value="" style="line;strokeWidth=2;html=1;labelBackgroundColor=default;fontColor=#000000;direction=south;" vertex="1" parent="1">
+                <mxCell id="48" value="" style="line;strokeWidth=2;html=1;labelBackgroundColor=default;fontColor=#000000;direction=south;" parent="1" vertex="1">
                     <mxGeometry x="370" y="177.5" width="10" height="35" as="geometry"/>
                 </mxCell>
-                <mxCell id="50" value="" style="line;strokeWidth=2;direction=south;html=1;labelBackgroundColor=default;fontColor=#000000;" vertex="1" parent="1">
+                <mxCell id="50" value="" style="line;strokeWidth=2;direction=south;html=1;labelBackgroundColor=default;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="220" y="310" width="10" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="51" value="" style="line;strokeWidth=2;direction=south;html=1;labelBackgroundColor=default;fontColor=#000000;rotation=45;" vertex="1" parent="1">
+                <mxCell id="51" value="" style="line;strokeWidth=2;direction=south;html=1;labelBackgroundColor=default;fontColor=#000000;rotation=45;" parent="1" vertex="1">
                     <mxGeometry x="210" y="340" width="10" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="52" value="" style="line;strokeWidth=2;direction=south;html=1;labelBackgroundColor=default;fontColor=#000000;rotation=-45;" vertex="1" parent="1">
+                <mxCell id="52" value="" style="line;strokeWidth=2;direction=south;html=1;labelBackgroundColor=default;fontColor=#000000;rotation=-45;" parent="1" vertex="1">
                     <mxGeometry x="230" y="340" width="10" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="53" value="" style="line;strokeWidth=2;html=1;labelBackgroundColor=default;fontColor=#000000;" vertex="1" parent="1">
+                <mxCell id="53" value="" style="line;strokeWidth=2;html=1;labelBackgroundColor=default;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="215" y="320" width="20" height="10" as="geometry"/>
                 </mxCell>
-                <mxCell id="55" value="" style="line;strokeWidth=2;html=1;labelBackgroundColor=default;fontColor=#000000;" vertex="1" parent="1">
+                <mxCell id="55" value="" style="line;strokeWidth=2;html=1;labelBackgroundColor=default;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="400" y="390" width="200" height="10" as="geometry"/>
                 </mxCell>
-                <mxCell id="57" value="" style="line;strokeWidth=2;direction=south;html=1;labelBackgroundColor=default;fontColor=#000000;" vertex="1" parent="1">
+                <mxCell id="57" value="" style="line;strokeWidth=2;direction=south;html=1;labelBackgroundColor=default;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="595" y="320" width="10" height="80" as="geometry"/>
                 </mxCell>
-                <mxCell id="58" value="" style="line;strokeWidth=2;html=1;labelBackgroundColor=default;fontColor=#000000;rotation=90;" vertex="1" parent="1">
+                <mxCell id="58" value="" style="line;strokeWidth=2;html=1;labelBackgroundColor=default;fontColor=#000000;rotation=90;" parent="1" vertex="1">
                     <mxGeometry x="396" y="390" width="35" height="10" as="geometry"/>
                 </mxCell>
-                <mxCell id="59" value="" style="line;strokeWidth=2;html=1;labelBackgroundColor=default;fontColor=#000000;" vertex="1" parent="1">
+                <mxCell id="59" value="" style="line;strokeWidth=2;html=1;labelBackgroundColor=default;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="580" y="330" width="40" height="10" as="geometry"/>
                 </mxCell>
-                <mxCell id="60" value="" style="line;strokeWidth=2;html=1;labelBackgroundColor=default;fontColor=#000000;" vertex="1" parent="1">
+                <mxCell id="60" value="" style="line;strokeWidth=2;html=1;labelBackgroundColor=default;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="400" y="535" width="80" height="10" as="geometry"/>
                 </mxCell>
-                <mxCell id="61" value="" style="line;strokeWidth=2;direction=south;html=1;labelBackgroundColor=default;fontColor=#000000;" vertex="1" parent="1">
+                <mxCell id="61" value="" style="line;strokeWidth=2;direction=south;html=1;labelBackgroundColor=default;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="409" y="530" width="10" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="62" value="" style="line;strokeWidth=2;direction=south;html=1;labelBackgroundColor=default;fontColor=#000000;" vertex="1" parent="1">
+                <mxCell id="62" value="" style="line;strokeWidth=2;direction=south;html=1;labelBackgroundColor=default;fontColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="462.52" y="530" width="10" height="20" as="geometry"/>
                 </mxCell>
             </root>

@@ -15,16 +15,17 @@
   has_many :payments
 
 ## itemsテーブル
-| Column              | Type       | Options     |
-| ------------------- | ---------- | ----------- |
-| item_name           | string     | null: false |
-| description_of_item | text       | null: false |
-| category_id         | integer    | null: false |
-| condition_id        | integer    | null: false |
-| postage_id          | integer    | null: false |
-| item_address_id     | integer    | null: false |
-| prefecture_id       | integer    | null: false |
-| price               | integer    | null: false |
+| Column              | Type       | Options                        |
+| ------------------- | ---------- | ------------------------------ |
+| item_name           | string     | null: false                    |
+| description_of_item | text       | null: false                    |
+| category_id         | integer    | null: false                    |
+| condition_id        | integer    | null: false                    |
+| postage_id          | integer    | null: false                    |
+| item_address_id     | integer    | null: false                    |
+| prefecture_id       | integer    | null: false                    |
+| price               | integer    | null: false                    |
+| user                | reference  | null: false, foreign_key: true |
 
   has_one :payment
   belongs_to :user
