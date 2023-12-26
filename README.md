@@ -9,7 +9,7 @@
 | first_name_ruby    | string     | null: false               |
 | last_name          | string     | null: false               |
 | last_name_ruby     | string     | null: false               |
-| date               | string     | null: false               |
+| birthday           | date       | null: false               |
 
   has_many :items
   has_many :payments
