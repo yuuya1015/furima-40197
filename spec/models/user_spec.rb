@@ -3,7 +3,6 @@ RSpec.describe User, type: :model do
   before do
     @user = FactoryBot.build(:user)
   end
-
   describe 'ユーザー新規登録' do
     context 'ユーザー新規登録ができない場合' do
       it 'nicknameが空では登録できない' do
@@ -23,7 +22,6 @@ RSpec.describe User, type: :model do
         another_user.valid?
         expect(another_user.errors.full_messages).to include('Email has already been taken')
       end
-
       it 'メールアドレスは、@が含まれていなければ登録できない' do
         @user.email = 'testmail'
         @user.valid?
@@ -47,28 +45,44 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
       end
+      it 'パスワードは半角数字のみの場合登録できない' do
+        @user.password = '000000'
+        @user.password_confirmation = '000000'
+        expect(@user).not_to be_valid
+      end
+      it 'パスワードは半角英字のみの場合登録できない' do
+        @user.password = 'abcdef'
+        @user.password_confirmation = 'abcdef'
+        expect(@user).not_to be_valid
+      end
+      it 'パスワードは半角英数字以外の文字が含まれている場合登録できない' do
+        @user.password = '12345&'
+        expect(@user).not_to be_valid
+        expect(@user.errors.full_messages).to include('Password には英字と数字の両方を含めて設定してください')
+      end
       it '名前(全角)は、名字と名前がそれぞれ入力されていないと登録できない' do
         @user.last_name = ''
         @user.first_name = ''
         expect(@user).not_to be_valid
         @user.valid?
-        expect(@user.errors.full_messages).to include("Last name can't be blank", "First name can't be blank")
+          expect(@user.errors.full_messages).to include("Last name can't be blank", "First name can't be blank")
       end
-      it '名字と名前は、全角（漢字・ひらがな・カタカナ）それぞれ入力されていないと登録できない' do
+      it '名字と名前は、全角文字で入力されていない場合、エラーメッセージが表示される' do
         user = User.new(last_name: '山田1太郎ひらがなカタカナ漢字ー')
         expect(user).not_to be_valid
-        @user.valid?
-        expect(user.errors.full_messages).to include('Last name 全角文字を使用してください', 'First name 全角文字を使用してください')
+      
+        expect(user.errors[:last_name]).to include('全角文字を使用してください')
+        expect(user.errors[:first_name]).to include('全角文字を使用してください')
       end
       it '生年月日が入力されていないと登録できない' do
         user = User.new(birthday: nil)
         expect(user).not_to be_valid
       end
-      context 'ユーザー登録ができる場合' do
-        it 'nicknameとemail、passwordとpassword_confirmation、first_nameとfirst_name_ruby、last_nameとlast_name_ruby、生年月日が存在すれば登録できる' do
-          expect(@user).to be_valid
-        end
+    end
+    context '正常なユーザー登録' do
+      it 'バリデーションの正常系' do
+        expect(@user.valid?).to be true
       end
     end
   end
-end
+  end
