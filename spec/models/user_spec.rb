@@ -65,18 +65,47 @@ RSpec.describe User, type: :model do
         @user.first_name = ''
         expect(@user).not_to be_valid
         @user.valid?
-          expect(@user.errors.full_messages).to include("Last name can't be blank", "First name can't be blank")
+        expect(@user.errors.full_messages).to include("Last name can't be blank", "First name can't be blank")
       end
-      it '名字と名前は、全角文字で入力されていない場合、エラーメッセージが表示される' do
-        user = User.new(last_name: '山田1太郎ひらがなカタカナ漢字ー')
-        expect(user).not_to be_valid
-      
-        expect(user.errors[:last_name]).to include('全角文字を使用してください')
-        expect(user.errors[:first_name]).to include('全角文字を使用してください')
+      it 'last_nameがひらがな、カタカナ、漢字以外が含まれている場合登録できない' do
+        @user.last_name = '田中&メアリー'
+        expect(@user).not_to be_valid
+        @user.valid?
+        expect(@user.errors.full_messages).to include('Last name ひらがな、カタカナ、漢字以外が含まれている場合登録できない')
+      end
+      it 'first_nameひらがな、カタカナ、漢字以外が含まれている場合登録できない' do
+      @user.first_name = '田中&メアリー'
+      expect(@user).not_to be_valid
+      @user.valid?
+      expect(@user.errors.full_messages).to include('First name ひらがな、カタカナ、漢字以外が含まれている場合登録できない')
+      end
+      it 'first_name_ruby全角カタカナ以外が含まれている場合登録できない' do
+        @user.first_name_ruby = 'meありー'
+        expect(@user).not_to be_valid
+        @user.valid?
+        expect(@user.errors.full_messages).to include('First name ruby 名字(カナ)・名前(カナ)は全角カタカナを使用してください')
+      end
+      it 'last_name_ruby全角カタカナ以外が含まれている場合登録できない' do
+        @user.last_name_ruby = 'meありー'
+        expect(@user).not_to be_valid
+        @user.valid?
+        expect(@user.errors.full_messages).to include('Last name ruby 名字(カナ)・名前(カナ)は全角カタカナを使用してください')
+      end
+      it 'first_name_ruby空の場合登録できない' do
+        @user.first_name_ruby = ''
+        expect(@user).not_to be_valid
+        @user.valid?
+        expect(@user.errors.full_messages).to include("First name ruby can't be blank")
+      end
+      it 'last_name_ruby空の場合登録できない' do
+        @user.last_name_ruby = ''
+        expect(@user).not_to be_valid
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Last name ruby can't be blank")
       end
       it '生年月日が入力されていないと登録できない' do
-        user = User.new(birthday: nil)
-        expect(user).not_to be_valid
+        @user.birthday = 'nil'
+        expect(@user).not_to be_valid
       end
     end
     context '正常なユーザー登録' do
@@ -85,4 +114,4 @@ RSpec.describe User, type: :model do
       end
     end
   end
-  end
+end
